@@ -1,10 +1,18 @@
-import { Outlet } from "react-router";
+import { UploadCloudIcon } from "lucide-react";
+import { Link, Outlet } from "react-router";
 
 export default function AuthLayout() {
   return (
-    <div>
-      <h1>Auth Layout</h1>
-      <Outlet />
+    <div className="bg-muted flex min-h-svh flex-col items-center justify-center gap-6 p-6 md:p-10">
+      <div className="flex w-full max-w-sm flex-col gap-6">
+        <Link to="/" className="flex items-center gap-2 self-center font-medium">
+          <div className="bg-primary text-primary-foreground flex size-10 items-center justify-center rounded-md">
+            <UploadCloudIcon className="size-6" />
+          </div>
+          SecureLoad
+        </Link>
+        <Outlet />
+      </div>
     </div>
   )
 }

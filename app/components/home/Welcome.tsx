@@ -5,7 +5,7 @@ export function Welcome() {
   return (
     <main className="relative min-h-screen overflow-hidden bg-background text-foreground">
 
-      <div className="mx-auto flex w-full max-w-5xl flex-col gap-12 px-6 pb-20 pt-16 sm:pt-24">
+      <div className="relative mx-auto flex w-full max-w-5xl flex-col gap-12 px-6 pb-20 pt-16 sm:pt-24">
         <header className="flex flex-col gap-6">
           <span className="w-fit rounded-full border border-border bg-secondary px-3 py-1 text-xs uppercase tracking-[0.3em] text-secondary-foreground/80">
             SecureLoad
