@@ -15,11 +15,7 @@ const navSections = [
     title: "Admin",
     items: [
       { to: "/admin/upload", label: "Carga CSV", icon: Upload },
-      {
-        to: "/admin/upload/results/demo-job",
-        label: "Resultados",
-        icon: FileText,
-      },
+      { to: "/admin/upload/results/demo-job", label: "Resultados", icon: FileText },
     ],
   },
 ];
@@ -65,11 +61,10 @@ export function SidebarNav({ onNavigate }: { onNavigate?: () => void }) {
           type="submit"
           variant="ghost"
           className="
-        w-full justify-start gap-2
-        text-destructive
-        hover:bg-destructive/10
-        hover:text-destructive
-      "
+            w-full justify-start gap-2
+            text-destructive
+            hover:bg-destructive/10
+            hover:text-destructive"
         >
           <LogOut className="h-4 w-4" />
           <span>Cerrar sesión</span>

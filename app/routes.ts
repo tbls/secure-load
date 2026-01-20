@@ -22,6 +22,7 @@ export default [
   ...prefix("/app", [
     layout("layouts/app-layout.tsx", [
       index("routes/dashboard/dashboard-page.tsx"),
+      route("profile", "routes/profile/profile-page.tsx"),
     ]),
   ]),
 
