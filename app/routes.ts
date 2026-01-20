@@ -23,14 +23,14 @@ export default [
     layout("layouts/app-layout.tsx", [
       index("routes/dashboard/dashboard-page.tsx"),
       route("profile", "routes/profile/profile-page.tsx"),
-    ]),
-  ]),
-
-  // Private (app)
-  ...prefix("/admin", [
-    layout("layouts/admin-layout.tsx", [
-      route("upload", "routes/upload/upload-page.tsx"),
-      route("upload/results/:jobId", "routes/upload/upload-results-page.tsx"),
+      
+      // Private (admin)
+      ...prefix("/admin", [
+        layout("layouts/admin-layout.tsx", [
+          route("upload", "routes/upload/upload-page.tsx"),
+          route("upload/results/:jobId", "routes/upload/upload-results-page.tsx"),
+        ]),
+      ]),
     ]),
 
   ]),

@@ -14,8 +14,8 @@ const navSections = [
   {
     title: "Admin",
     items: [
-      { to: "/admin/upload", label: "Carga CSV", icon: Upload },
-      { to: "/admin/upload/results/demo-job", label: "Resultados", icon: FileText },
+      { to: "/app/admin/upload", label: "Carga CSV", icon: Upload },
+      { to: "/app/admin/upload/results/demo-job", label: "Resultados", icon: FileText },
     ],
   },
 ];
