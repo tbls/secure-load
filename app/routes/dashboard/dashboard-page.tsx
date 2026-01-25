@@ -1,5 +1,5 @@
-import { DashboarCommonSection } from "~/components/dashboard/DashboarCommonSection";
-import { DashboardAdminSection } from "~/components/dashboard/DashboardAdminSection";
+import { DashboarCommonSection } from "~/modules/dashboard/DashboarCommonSection";
+import { DashboardAdminSection } from "~/modules/dashboard/DashboardAdminSection";
 
 export default function DashboardPage() {
 

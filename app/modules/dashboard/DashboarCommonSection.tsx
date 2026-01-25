@@ -1,4 +1,4 @@
-import { DashboarCard } from "~/components/dashboard/DashboarCard"
+import { DashboarCard } from "~/modules/dashboard/DashboarCard"
 
 const KPIs = [
   {

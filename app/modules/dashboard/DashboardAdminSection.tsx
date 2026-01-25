@@ -1,4 +1,4 @@
-import { DashboarCard } from "~/components/dashboard/DashboarCard"
+import { DashboarCard } from "~/modules/dashboard/DashboarCard"
 import { Card, CardContent } from "~/components/ui/card"
 import { Separator } from "~/components/ui/separator"
 

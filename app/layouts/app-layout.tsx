@@ -1,6 +1,6 @@
 import { Outlet } from "react-router";
-import { AppHeader } from "~/components/dashboard/AppHeader";
-import { SidebarNav } from "~/components/dashboard/SidebarNav";
+import { AppHeader } from "~/components/AppHeader";
+import { SidebarNav } from "~/components/SidebarNav";
 
 export default function AppLayout() {
   return (
