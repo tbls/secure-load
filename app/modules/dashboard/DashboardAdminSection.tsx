@@ -4,18 +4,21 @@ import { Separator } from "~/components/ui/separator"
 
 const jobs = [
   {
+    id:"1",
     title: "job-2024-09-18",
     meta: "CSV Clientes",
     status: "Completado",
     detail: "12 alertas",
   },
   {
+    id:"2",
     title: "job-2024-09-17",
     meta: "CSV Inventario",
     status: "En revision",
     detail: "4 alertas",
   },
   {
+    id:"3",
     title: "job-2024-09-16",
     meta: "CSV Ventas",
     status: "Completado",
@@ -25,12 +28,14 @@ const jobs = [
 
 const KPIs = [
   {
+    id:"1",
     title: "Registros con alerta",
     value: "12",
     description: "En los ultimos 3 jobs",
 
   },
   {
+    id:"2",
     title: "Campos por corregir",
     value: "43",
     description: "Actualizado hace 1 hora",
@@ -75,7 +80,7 @@ export function DashboardAdminSection() {
         <div className="grid grid-cols-1 gap-3 md:grid-cols-2">
           {
             KPIs.map(KPI => {
-              return <DashboarCard KPI={KPI} />
+              return <DashboarCard key={KPI.id} KPI={KPI} />
             })
           }
         </div>

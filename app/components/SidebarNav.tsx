@@ -1,4 +1,4 @@
-import { NavLink, Form, useNavigate } from "react-router";
+import { NavLink, Form } from "react-router";
 import { Button } from "~/components/ui/button";
 import { Separator } from "~/components/ui/separator";
 import { FileText, LayoutDashboard, LogOut, Upload, User } from "lucide-react";
@@ -20,13 +20,20 @@ const navSections = [
   },
 ];
 
-export function SidebarNav() {
+type SidebarNavProps = {
+  isAdmin?: boolean;
+};
+
+export function SidebarNav({ isAdmin = false }: SidebarNavProps) {
+  const visibleSections = isAdmin
+    ? navSections
+    : navSections.filter((section) => section.title !== "Admin");
 
   return (
     <nav className="flex flex-col p-2">
       {/* Navigation */}
       <div className="grid gap-2">
-        {navSections.map((section) => (
+        {visibleSections.map((section) => (
           <div key={section.title} className="grid gap-2">
             {section.items.map((item) => {
               const Icon = item.icon;

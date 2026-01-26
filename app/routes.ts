@@ -15,6 +15,8 @@ export default [
   ...prefix("/auth", [
     layout("layouts/auth-layout.tsx", [
       route("login", "routes/auth/login-page.tsx"),
+      // Actions
+      route("logout", "routes/auth/actions/logout.action.ts"),
     ]),
   ]),
 
@@ -23,7 +25,7 @@ export default [
     layout("layouts/app-layout.tsx", [
       index("routes/dashboard/dashboard-page.tsx"),
       route("profile", "routes/profile/profile-page.tsx"),
-      
+
       // Private (admin)
       ...prefix("/admin", [
         layout("layouts/admin-layout.tsx", [
@@ -31,6 +33,7 @@ export default [
           route("upload/results/:jobId", "routes/upload/upload-results-page.tsx"),
         ]),
       ]),
+      route("forbidden", "routes/forbidden/admin-only-page.tsx"),
     ]),
 
   ]),

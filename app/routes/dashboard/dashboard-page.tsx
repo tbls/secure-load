@@ -1,9 +1,16 @@
+import { useLoaderData } from "react-router";
 import { DashboarCommonSection } from "~/modules/dashboard/DashboarCommonSection";
 import { DashboardAdminSection } from "~/modules/dashboard/DashboardAdminSection";
+import { getSession } from "~/server/auth/session.server";
+
+export const loader = async ({ request }: { request: Request }) => {
+  const session = await getSession(request.headers.get("Cookie"));
+  const role = session.get("role");
+  return { role };
+};
 
 export default function DashboardPage() {
-
-  const isAdmin = true;
+  const { role } = useLoaderData<typeof loader>();
 
   return (
     <>
@@ -18,7 +25,7 @@ export default function DashboardPage() {
 
       <DashboarCommonSection />
 
-      {isAdmin && <DashboardAdminSection />}
+      {role === "admin" && <DashboardAdminSection />}
 
     </>
   );
